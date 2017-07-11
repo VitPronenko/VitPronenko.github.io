@@ -1,0 +1,452 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;                               /* обнуляем отступы и убираем бордюры */
+    vertical-align: baseline;          /* приводим все к одной базовой линии */
+    background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+    font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+    outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+td, td img {
+    vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+}
+input, select, button, textarea {
+    margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+    font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+    outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+    padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+    vertical-align: bottom;
+}
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+sub {
+    vertical-align: sub;
+    font-size: smaller;
+}
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display:block;
+}
+nav ul {
+    list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+    min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+    color: #000;
+    text-align: left;
+    font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+    min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+    color: #e6618c;
+    text-decoration: underline;
+}
+a:hover {
+    color: #fdf208;
+    text-decoration:none;
+}
+a:focus, a:active {
+    color: #c83867;
+    text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight:normal;
+}
+img{
+
+    max-width:100%;
+}
+.clr{
+    clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+/* --------------- /базовые настройки ---------*/
+h3{
+    font-size: 24px; font-weight: 700;
+    text-transform: uppercase;
+    color:#000;
+    text-align: center;
+    padding: 40px 0 10px 0;
+}
+.content h4{
+    text-align: right;
+    margin-bottom: 10px;
+}
+.content h4>a{
+    font-size: 14px; font-style: italic;
+    text-transform: uppercase;
+    color:#777;
+    text-align: right;
+    text-decoration: none;
+
+}
+.content h4>a:hover{
+    color:#cbe614;
+
+}
+
+.menu-top{
+    padding:0;
+    background:#777;
+}
+.phone-top{
+    padding-top:15px; font-size:9px; text-transform:uppercase;
+    text-align:right;
+}
+.phone-top span{
+    font-size:12px; font-weight:700;
+    color:#cbe614;
+}
+.main-menu{
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+}
+.main-menu .navbar-inverse{
+    background: #777;
+    border:none;
+    border-radius: 0;
+    border-bottom:4px solid #000;
+}
+.main-menu-bg{
+    background: #777;
+}
+.navbar-inverse .navbar-nav>li>a{
+    font-size: 12px; font-weight: 700; text-transform: uppercase; color:#fff; text-decoration: none;
+}
+.navbar-inverse .navbar-nav>li>a:hover{
+    color:#cbe614;
+}
+
+.navbar-inverse .navbar-nav>li>a:last-child{
+    padding-right: 0;
+}
+
+.navbar-brand>img{
+    display: block;
+    float:left;
+    margin-top:-45px;
+}
+.navbar>.container .navbar-brand{
+    margin-left: 30px;
+}
+.navbar-brand {
+    float: left;
+    height: 55px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+
+}
+.navbar{
+    margin-bottom: 0;
+}
+.navbar-inverse .navbar-collapse{
+    border:none;
+}
+    /* ============================= SLIDER ================================================== */
+.carusel-top{
+    border-bottom:4px solid #000;
+    text-align:center;
+}
+.carusel-top .item{
+    min-height:440px;
+}
+.carusel-top .bgslide{
+    position:absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background-size:cover;
+    background-position:center center;
+}
+
+.carousel.fade{
+    opacity:1;
+}
+.carousel.fade .item{
+    opacity:0;
+    transition: opacity .5s;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+}
+.carousel.fade .item.active{
+    opacity:1;
+    position: relative;
+}
+
+.carousel-control.left{
+    background: transparent;
+}
+.carousel-control.right{
+    background: transparent;
+}
+
+.carousel .carousel-caption{
+    font-size: 66px; font-weight: 700; color:#fff;
+    padding-bottom: 120px;
+}
+/* ============================== USER TOUR ==================================================  */
+.user-tour{
+    background: #777;
+    border-bottom: 4px solid #000;
+}
+
+.user-tour .cantry-list li{
+    padding-top: 9px;
+    padding-left: 50px;
+}
+
+.user-tour .cantry-list li>a{
+    font-size: 18px; color:#fff;
+    padding-top: 20px !important;
+    text-decoration: none;
+
+}
+.user-tour .cantry-list li>a:hover{
+    font-size: 20px; color:#cbe614;
+
+}
+.user-tour .cantry-list ul{
+    list-style-type: none;
+}
+.user-tour .aero>input{
+    height: 30px;
+    width: 200px;
+    margin:0;
+    padding: 0;
+    border:1px solid #4c4c4c;
+    background: #fff;
+}
+.user-tour .aero>input:focus{
+    border:1px solid #00CC00;
+}
+.user-tour .forms{
+    max-width: 600px;
+    border: 1px solid #4c4c4c;
+    background: #999;
+}
+.form-control{
+    height: 30px;
+    width: 200px;
+    border:1px solid #4c4c4c;
+    border-radius: 0;
+    background: #fff;
+}
+.user-tour .button2{
+    margin-top: 40px;
+}
+.user-tour .button2>input {
+    height: 36px;
+    width: 200px;
+    border: 1px solid #4c4c4c;
+}
+.user-tour .button2>input:focus{
+    border:1px solid #00CC00;
+}
+/* ============================== CONTENT-VARIANT ===========================================  */
+.content-variant .content .variant .variant-title{
+    font-size: 18px; color:#000;
+    margin-top: -65px;
+    padding-left: 10px;
+}
+.content-variant .content .variant .variant-price{
+    font-size: 24px; font-weight: 700;
+    color: #000;
+    margin-top: 0;
+    padding-left: 10px;
+}
+
+.content-variant .content .variant-row{
+    padding-bottom: 15px;
+}
+.content-vibor .content-vibor-img{
+    float:left;
+    padding-right: 5px;
+}
+.content-vibor .content-vibor-title{
+    font-size: 16px; color:#000; text-transform: uppercase;
+}
+.content-vibor .content-vibor-text>a{
+    font-size: 14px; font-style: italic; text-decoration: none;
+}
+.content-vibor .content-vibor-text>a:hover{
+    font-size: 14px; font-style: italic; text-decoration: none; color:#00CC00;
+}
+/* ============================== FOOTER ==================================================  */
+.footer-menu{
+    background: #777;
+    margin-top: 40px;
+    padding: 15px 0;
+    border-top:4px solid #000;
+
+}
+.footer-menu li{
+    padding-top: 10px;
+    list-style-type: none;
+
+}
+.footer-menu li>a{
+    padding-top: 10px;
+    font-size: 11px; color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.footer-menu li>a:hover{
+    color:#00CC00;
+}
+.footer-copyright{
+    padding: 10px 0;
+    background: #0f0f0f;
+    font-size: 14px; color: #fff;
+}
+.footer-menu h5{
+    font-size: 12px; color:#fff; text-transform: uppercase;
+    padding-top: 10px;
+}
+.footer-menu p{
+    font-size: 12px; font-size: 12px; color:#fff;
+    padding-top: 2px;
+}
+.footer-menu p>a{
+    font-size: 12px; font-size: 12px; color:#fff; text-decoration: none;
+}
+/* ============================== MEDIA ==================================================  */
+@media only screen and (max-width:1194px){
+    .menu-top{
+        padding:0;
+        background:#777;
+    }
+    .phone-top{
+        padding-top:15px; font-size:9px; text-transform:uppercase;
+        text-align:right;
+    }
+    .main-menu .navbar-nav{
+        float: none !important;
+    }
+    .carousel .carousel-caption{
+        font-size: 58px;
+        padding-bottom: 100px;
+    }
+}
+
+
+@media only screen and (max-width:992px){
+    .menu-top{
+        padding:0;
+        background:#777;
+    }
+    .navbar>.container .navbar-brand{
+        margin-left: 0;
+    }
+    .navbar>.container{
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .navbar-nav>li>a{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .carousel .carousel-caption{
+        font-size: 48px;
+        padding-bottom: 100px;
+    }
+    .user-tour .cantry-list li{
+        padding-left: 0;
+        text-align: center;
+    }
+    .content-vibor .content-vibor-title{
+        font-size: 14px; color:#000; text-transform: uppercase;
+    }
+    .content-vibor .content-vibor-text>a{
+        font-size: 12px;
+    }
+    .content-vibor .content-vibor-text>a:hover{
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width:777px){
+    .content-variant .content .variant{
+        padding: 10px 0;
+    }
+}
+
+@media only screen and (max-width:450px){
+    h3{
+        font-size: 18px;
+    }
+    .navbar-brand>img{
+        max-width:55%;
+        float:left;
+    }
+    .navbar-brand{
+        padding:0;
+        margin-top:0;
+    }
+    .phone-top{
+        padding-top:6px;
+        text-align:center;
+    }
+    .navbar-brand>img{
+        display: block;
+        float:left;
+        margin-top:5px;
+    }
+    .carousel .carousel-caption{
+        font-size: 36px;
+        padding-bottom: 100px;
+    }
+    .content-vibor .content-vibor-title{
+        font-size: 12px;
+    }
+    .content-vibor .col-xs-6{
+        padding: 10px 0;
+    }
+    .content-vibor .content-vibor-text>a{
+        font-size: 10px;
+    }
+    .content-vibor .content-vibor-text>a:hover{
+        font-size: 10px;
+    }
+
+}
+
+
+

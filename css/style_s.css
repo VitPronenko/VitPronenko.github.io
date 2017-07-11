@@ -1,0 +1,500 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	background:#fff5dc;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+	
+	color: #2a2d34; /* Темно-серый цвет для всего текста*/
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+	font-family: 'Roboto', sans-serif;   /*     */
+
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #a62022;
+	text-decoration: underline;
+}
+a:hover {
+	color: #a62022;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #a62022;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+/* --------------- /базовые настройки ---------*/
+
+
+
+.center-block-main {
+	max-width:1024px; margin:0 auto;
+}
+
+.header-top{
+	padding:10px 0;
+	border-bottom:2px solid #622b19;
+}
+	.logo {
+		float:left; margin-top:10px
+	}
+	
+	.slogan { 
+	 color: #622b19; 
+	 font-family: 'Lobster', cursive;
+	 font-size:1.5em; 
+	 float:left; 
+	
+	}
+	
+	.contact{
+		float:right; font-weight:600; margin-top:10px;
+	}
+	
+	.contact p img {
+		vertical-align:middle; /*  Выравнивание по вертикали картинки с телефоном */
+		margin-right:5px;
+	}
+	
+.header-bottom {
+	padding:15px 0 5px 0;
+}
+	.menu{
+		float:left;
+	}
+	
+	.menu li{
+		float:left;
+		text-transform:uppercase;
+		margin-right:30px;
+		font-size:1em;
+	}
+		.menu li a{
+			color:#2a2d34;
+			text-decoration:none;
+		}
+			.menu li a:hover{
+				color: #a62022;
+			}
+	.search-block{
+		float:right;
+		margin-top:-4px; 
+	
+		
+	}
+		.search-btn{
+			float:left;
+			margin:7px 5px 0 60px;
+		}
+		.search{
+			background:none;
+			float:left;
+			font-size:0.875em;
+			color:#7e7f84;
+			border:1px; margin-top:5px;
+			
+			
+		}
+		
+.my-slider{
+	font-family: 'Roboto Condensed', sans-serif;
+	
+}
+
+	.my-slider ul li{
+		position:relative; color:#ffffc2;
+	}
+	
+	.my-slider ul li h2{
+		position:absolute; top:70px; left:70px; font-size:3.185em; line-height:1.1; text-transform:uppercase;
+	}
+	
+	.my-slider ul li p{
+		position:absolute; top:130px; left:70px; font-size:1.6em; 
+	}
+	
+	.unslider-nav{
+	max-width:1024px; margin:0 auto; position:relative; top:-30px;
+}
+
+
+.block3-main{
+	margin-top:30px;
+	margin-bottom:50px;
+	}
+	
+	.block3-main article{
+		width:31.25%; float:left; margin-left:3.125%;
+	}
+	.block3-main article:first-child{
+		margin-left:0;
+	}
+	.block3-main article img{
+		display:block; margin:0 auto 10px auto;
+	}
+	.block3-main article h2{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:1.125em; text-transform:uppercase;
+		margin-bottom:5px;
+	}
+	.block3-main article p{
+		font-size:0.875em;
+	}
+	
+
+.block4-section {
+	margin-bottom:50px;
+	
+}
+	.block4-section>h2{
+		text-align:center; font-family: 'Roboto Condensed', sans-serif;
+		text-transform:uppercase; font-size:1.5em; 
+		margin-bottom:20px;
+	}
+		
+		.block4-main {
+			
+		}
+			.block4-main article {
+				width:22.85%; float:left; margin-left:2.86%;
+				
+			}
+			.block4-main article:first-child{
+			margin-left:0;
+			}
+				.block4-main article img{
+			display:block; margin:0 auto;
+			}
+			
+			.block4-main-content{
+				padding:10px; border:1px solid #622b19; border-top:none;
+			}
+			.block4-main-content h2{
+				color:#2a2d34; font-size:1em; text-transform:uppercase; 
+				margin-bottom:10px; font-weight:600;
+			}
+			.block4-main-content p{
+				font-size:0.875em;
+			}
+			
+			p.price-wait{
+				border-top:1px solid #622b19; 
+				font-size:0.875em; color:#f45a40; padding:10px 0; margin-bottom:0;
+			}
+			
+			.price{
+				float:left; color: #a62022;
+			}
+			.wait{
+				float:right; font-size:0.675em; 
+				color:#7e7f84; text-decoration:none; font-style:italic;
+			}
+			
+			.wait a{
+				color:#7e7f84; text-decoration:none;
+			}
+			.wait a:hover{
+				color: #a62022;
+			}
+	
+
+.about {
+	margin-bottom:60px;
+}
+	.about article{
+		float:left; width:50%;
+	}
+	.about article h2{
+		font-size:1.125em; text-transform:uppercase; font-weight:600;
+		margin-bottom:20px;
+	}
+	.about article p{
+		font-style:italic; font-size:0.875em; margin-bottom:5px;
+		}
+	.about .map {
+		float:right; width:45%;
+	}
+	
+/* ---- адаптивность карты ------ */
+	
+		.mapin{
+		position:relative; 
+		padding-bottom:75%; /*  это 450 пикселей: 600 пикселей карты */
+		height:0;
+		overflow:hidden; /* чтобы ничего не вылазило за заданный блок */ 
+	}
+		.mapin iframe{
+			position:absolute;
+			top:0; left:0; width:100%; height:100%;
+		}
+/*   конец адаптивностьи карты ------ */
+
+
+.subscribe{
+	width:100%; background:#a62022; color:#fff; padding:30px 0;
+}
+	.subscribe h2{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size:1.125em; text-transform:uppercase;
+		float:left; margin-top:7px;
+	}
+	.subscribe-form {
+		float:right; margin-top:5px;
+	}
+		.email-input{
+			font-size:0.875em; float:left; width:250px; padding:5px 20px; border:0;
+		}
+		.submit-input{
+			background:#ff674f; float:left;
+			font-size:0.875em; text-transform:uppercase; color:#fff; margin-left:5px; padding:5px 5px;
+			border:0;
+			cursor:pointer;
+		}
+		
+		
+.ftr{
+	background:#2a2d34; padding:40px 0; 
+	font-family: 'Roboto Condensed', sans-serif;
+}		
+	.ftr h2{
+		text-transform:uppercase;
+		color:#fff; font-size:1.125em; padding-bottom:10px;
+	}
+	.ftr a {
+		color:#fff;
+		text-decoration:none;
+	}
+	.ftr a:hover {
+		color: #a62022; text-decoration:underline;
+	}
+	
+	.ftr p{
+		color:#7e7f84; font-size:0.875px; margin-bottom:5px;  
+	}
+	.support {
+		float:left;
+	}
+	.support a{
+		display:block; /* каждая ссылка с новой строки */
+	}
+	
+	.ftrmail{
+		width:100%; text-transform:uppercase; font-size:0.75em; margin-bottom:10px; border:0; padding:5px 10px;
+		box-sizing:border-box;
+	}
+	
+	.ftrtext{
+		
+		width:100%; text-transform:uppercase;  margin-bottom:10px; border:0; padding:5px 10px;
+		box-sizing:border-box;
+	}
+	
+	.ftrsubmit {
+			background:#ff674f; float:left;
+			font-size:0.875em; text-transform:uppercase; color:#fff; padding:5px 10px;
+			border:0; cursor:pointer;
+	}
+	
+
+	
+@media screen and (max-width: 900px){
+
+	
+	.my-slider ul li h2{
+		top:50px; font-size:3em;
+	}
+	.my-slider ul li p{
+		top:100px;font-size:1.125em;
+	}
+			.block4-main article {
+				width:45%; float:left; margin:0 2.5% 30px 0;
+			}
+			.block4-main article:first-child{
+			margin-left:0 2.5% 30px 2.5%;
+			}
+			
+							.block4-main article img{
+							width:100%; margin:0 auto;
+							}
+			
+	.subscribe h2{
+		float:none; text-align:center; margin:0 0 20px 0;
+	}
+	.subscribe-form{
+		float:none; display:table; margin:0 auto;
+	}	
+	
+	
+	.logo {
+		float:none; display:block; margin:0 auto;
+
+	}
+	
+	.slogan { 
+	text-align:center; margin:0 0 10px 0; width:100%
+	}
+	
+	.contact {
+		display:table; margin:0 auto; text-align:center; width:100%
+	}
+	
+
+}
+
+@media screen and (max-width:780px){
+	
+	.header-bottom  .menu li{
+		float:none;
+		width:100%
+		text-align:left;
+	}
+	
+	.my-slider ul li h2{
+		top:20px; left:30px; font-size:2em;
+	}
+	.my-slider ul li p{
+		top:60px; left:30px;
+	}
+	.search-block{
+		border-top:1px solid #f1f1f1; border-bottom:1px solid #f1f1f1; margin-top:10px; padding:5px 0 7px 0; float:right;
+	}
+		.block3-main article{
+			width:95%; margin:0 2.5% 30px 2.5%; float:none; overflow:hidden;
+		}
+		.block3-main article:first-child{
+			width:95%; margin:0 2.5% 30px 2.5%; float:none;
+		}
+		.block3-main article img{
+		width:100%;
+	}
+		.about article{
+		float:none; width:95%; margin:0 2.5% 30px 2.5%;
+	}
+	.about .map{
+		float:none; width:95%; margin:0 2.5% 30px 2.5%;
+	}
+}
+
+
+
+@media screen and (max-width:540px){
+
+	
+	
+	.my-slider ul li h2{
+		top:25px; font-size:2em; color:#fff;
+	}
+	.my-slider ul li p{
+
+		opacity:0;
+	}
+	.block4-main article{
+			width:95%; margin:0 2.5% 30px 2.5%; float:none; overflow:hidden;
+		}
+		.block4-main article:first-child{
+			width:95%; margin:0 2.5% 30px 2.5%; float:none;
+		}
+}
+
+
+@media screen and (max-width:420px){
+	.header-top{
+		padding:10px 0;
+	}
+	.logo{
+		float:none; text-align:center; margin-bottom:10px;
+	}
+	.contakt-basket{
+		float:none; display:table; margin:0 auto;
+	}
+}
+@media screen and (max-width:360px){
+	.email-inpt{
+		float:none; width:95%; margin:0 2.5% 20px 2.5%; box-sizing:border-box;
+	}
+	.submit-inpt{
+		margin-left:2.5%;
+	}
+	.my-slider ul li h2{
+		top:5px; font-size:2em;
+	}
+	
+	}
+}

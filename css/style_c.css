@@ -1,0 +1,548 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнул€ем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устран€ем отступы между €чейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию дл€ элементов форм (в частности дл€ checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы дл€ текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+
+html, body{
+	height:100%;
+}
+body{
+	background:#fff;
+	font-family:'Ubuntu', san-serif;
+	font-size:16px; color:#828282; font-weight:400;
+	min-width:320px;
+}
+a{
+	font-family: 'Montserrat', sans-serif;
+	font-size:17px; color:#2cc7c1; font-weight:700;
+}
+
+a:hover{
+	 color:#2cc7c1;
+}
+img{
+	max-width:100%; 
+	height:auto;
+}
+
+section{
+	position:relative;
+}
+h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size:30px; font-weight:700;
+	margin-top:0;
+	text-transform:uppercase;
+}
+p{
+	margin:10px 0;
+}
+
+/* ====================== HEADER ====================================================================  */
+#header{
+	background:url(../images/2.jpg) center;
+	background-size:cover;
+	/* height:100vh; */
+	min-height:550px;
+	height:100%;
+}
+
+.section-table{
+	display:table;
+	height:100%;
+	width:100%;
+}
+.section-row{
+	display:table-row;
+}
+.section-cell{
+	display:table-cell;
+	text-align:center;
+	vertical-align:middle;
+}
+.section-center{
+	max-width:560px;
+	display:inline-block;
+}
+
+#header h1{
+	font-family: 'Montserrat', sans-serif;
+	font-size:32px; font-weight:700; color:#fff;
+	text-transform:uppercase;
+	margin:20px 0;
+}
+
+
+#header h2{
+	font-family: 'Montserrat', sans-serif;
+	font-size:20px; font-weight:700; color:#fffcd5;
+	text-transform:uppercase;
+	margin:10px 0;
+}
+
+#header h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size:18 px; font-weight:700; color:#fffcd5;
+	text-transform:uppercase;
+}
+
+#header p{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:20px;
+	color:#fff;
+}
+.btn{
+	font-family: 'Montserrat', sans-serif;
+	font-size:17px; color:#fff;
+	text-transform:uppercase;
+	padding:10px 20px;
+	margin:0 10px;
+	border:none;
+	transition: background .5s;
+}
+.btn-primary{
+	background:#7ea4e8;
+}
+.btn-primary:hover{
+	background:#496ba9;
+}
+.btn-default{
+	background:#6a7079;
+}
+.btn-default:hover{
+	background:#474c52;
+	color:#fff;
+}
+
+
+/* ========================= speakers ================================================================ */
+#speakers{
+	padding:90px 0;
+	border-bottom:2px solid #f0f0f1;
+}
+#speakers h2{
+	color:#828689;
+}
+.large{
+	color:#828689;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:22px;
+	margin:20px 0;
+}
+
+.section-tabs{
+	border:3px solid #ececec; border-radius:2px;
+}
+.section-tabs .nav-tabs li:not(.activ){
+	background:#ececec;
+}
+.section-tabs .nav-tabs.nav-justified li a,
+.section-tabs .nav-tabs.nav-justified li.active a,
+.section-tabs .nav-tabs.nav-justified li.active a:focus,
+.section-tabs .nav-tabs.nav-justified li.active a:hover{
+	border-radius:0;
+	border:none;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:18px; font-weight:700;
+	outline:0;
+}
+.section-tabs .nav-tabs li.active a{
+	color:#9097a1;
+}
+.nav-tabs li a{
+	color:#abb1ba;
+}
+.section-tabs .tab-content{
+	padding:25px 20px;
+}
+.section-tabs .tab-content ul{
+	padding-left:10px;
+}
+.section-tabs .tab-content ul li{
+	line-height:20px;
+	font-size:16px;
+	padding:8px 0;
+}
+.section-tabs .tab-content ul li i{
+	font-size:15px;
+	color:#2cc7c1;
+	margin-right:10px;
+}
+
+.speakers-head{
+	margin-top:100px; margin-bottom:60px;
+}
+.speakers-head h2{
+	color:#6a7079;
+	text-transform:uppercase;
+}
+.speakers  h3{
+	font-size:20px; 
+	color:#777a7d;
+	text-transform:uppercase;
+}
+.speakers-footer{
+	margin-top:70px;
+	color:#6a7079;
+	font-size:17px; 
+	
+}
+
+.item >div{
+	position:relative;
+}
+
+.front{
+	position:absolute;
+	width:140px; height:140px;
+	left:50%; margin-left:-70px; /*  для ИЕ7 */
+	cursor:pointer;
+}
+.back{
+	width:140px; height:140px;
+	background:#3fc3bd;
+	display:inline-block;
+	border-radius:50%;
+	opacity:0;
+}
+.back i{
+	line-height:140px;
+	font-size:30px; color:#fff;
+}
+.item >div:hover .front{
+	opacity:0.2;
+}
+.item >div:hover .back{
+	opacity:1;
+}
+.item >div:hover h3{
+	color:#3fc3bd;
+	cursor:pointer;
+}
+
+/* ========================= EVENTS =================================================================== */
+#events{
+	padding:90px 0;
+}
+.link{
+	text-transform:uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-size:17px; font-weight:700;
+	color:#2cc7c1;
+}
+.time{
+	background:#2cc7c1;
+	color:#fff;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:17px; font-weight:500;
+	padding:5px;
+	border-radius:2px;
+	margin-right:25px;
+}
+.collapse-link{
+	color:#747a84;
+	font-family: 'Ubuntu', sans-serif;
+	font-size:18px; font-weight:500;
+}
+.collapse-link:hover{
+	color:#747a84;
+}
+.collapse-state{
+	color:#2cc7c1;
+	font-size:18px; 
+}
+.collapse p{
+	color:#999;
+}
+.tab-collapse{
+	margin-bottom:20px;
+}
+.row-item{
+	margin-top: 100px;
+}
+
+.carousel-indicators{
+	left:0;
+	bottom:10px;
+	margin:0;
+	margin-left:20px;
+	width:auto;
+}
+.carousel-indicators li{
+		border:2px solid #2cc7c1;
+		background:#fff;
+		height:15px;
+		width:15px;
+
+		
+}
+.carousel-indicators li.active{
+		background:#2cc7c1;
+		height:18px;
+		width:18px;
+}
+
+/* ============================ FORM ================================================================== */
+#form{
+	padding: 90px 0;
+	background: #f3f3f3;
+}
+.section-form{
+	background: #fff;
+	padding: 40px;
+	border-radius: 2px;
+	margin-top: 50px;
+}
+.section-form input,
+.section-form select{
+	height: 44px;
+	background: #efefef;
+	padding-right: 25px;
+	padding-left:10px;
+}
+.has-success .form-control-feedback{
+	color: #2cc7c1;
+}
+.has-success .form-control,
+.section-form input.form-control:focus{
+	border: 2px solid #95e3e0;
+	background: #fff;
+	box-shadow: none;
+}
+.form-control-feedback{
+	right: 10px;
+	line-height: 44px;
+}
+
+
+/*поле select - размеры, фон, горизонтальное выравнивание*/
+.select2-container--default .select2-selection--single{
+	height: 44px;
+	text-align: left;
+	background: #efefef;
+}
+/*поле select - вертикальное выравнивание + цвет*/
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+	line-height: 44px;
+	color: #bebebe;
+}
+/*фон открытого поля select*/
+.select2-container--open .select2-selection--single{
+	background: #2cc7c1;
+}
+/*цвет открытого поля select*/
+.select2-container--open .select2-selection--single .select2-selection__rendered{
+	color: #fff;
+}
+/*выравнивание стрелки*/
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+	top: 10px;
+}
+
+/*скрываем placeholder Выбирите план*/
+/*  li.select2-results__option:first-child{
+	display: none;
+} */
+
+/*оставляем placeholder Выбирите план*/
+li.select2-results__option:first-child{
+		color: #fff;
+}
+
+/*фон списка*/
+.select2-results__options,
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option[aria-selected="true"]{
+	background: #525b64;
+}
+/*цвет списка*/
+.select2-results__options{
+	color: #2cc7c1;
+}
+
+
+/* ========================== sponsors ================================================================ */	
+#sponsors{
+	background:#fff;
+	text-align:center;
+	padding:40px 0;
+}
+/* ========================== contacts ================================================================ */
+
+#contacts{
+	background:#525b64;
+	padding:60px 0;
+}
+#contacts h3,
+#contacts h4{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight:500;
+	color:#fff;
+	margin:0 0 25px 0;
+}
+#contacts h3{
+	font-size:24px; 
+}
+#contacts h4{
+	font-size:20px;
+}
+#contacts p{
+	font-family: 'Ubuntu', sans-serif;
+	font-size:16px; color:#cdd0d2;
+}
+#contacts a,
+#contacts .contacts p{
+	font-family: 'Ubuntu', sans-serif;
+	font-weight:500; font-size:16px;
+	color:#2cc7c1;
+}
+#contacts .contacts p i {
+	margin-right:10px;
+}
+.social img{
+	margin-right:20px;
+}
+/* ========================== copy ================================================================ */
+#copy{
+	background:#3f464c;
+	padding:15px 0;
+}
+#copy p{
+	color:#cacaca;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight:400; font-size:14px;
+	margin:0;
+	
+}
+
+
+/*  ======================================== MEDIA ===========================================  */
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+	#speakers, 
+	#events,
+	#forms,
+	#contacts{
+		padding:20px 0;
+	}
+	.speakers-head,
+	.speakers-footer{
+	margin:20px 0;
+	}
+	.row-item{
+		margin-top:20px;
+	}
+	.row-item-col{
+		margin:20px 0;
+	}
+	#sponsors{
+		padding:20px 0 0 0;
+	}
+	#sponsors img{
+		margin-bottom:20px;
+	}
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+	#header h1{
+	font-size:20px;
+	}
+	
+	#header p{
+	font-size:16px;
+	}
+	.section-center{
+	max-width:420px;
+	}
+	.btn{
+	font-size:14px;
+	min-width:55%;
+	margin-bottom:10px;
+	padding:10px 10px;
+	}
+}	
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 600px) {
+	.section-center{
+	max-width:280px;
+	}
+	#header h1{
+	font-size:18px;
+	}
+	
+	#header p{
+	font-size:15px;
+	}
+	
+}
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+#header{
+	min-height:220px;
+	}
+	.row-item{
+	margin-top: 10px;
+	}
+}
